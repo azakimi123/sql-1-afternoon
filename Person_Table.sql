@@ -70,4 +70,28 @@ AND age > 30;
 -- not sure about this one. Did they mean "OR"
 
 
---NUMBER 9 - 
+--NUMBER 9 - List all the people in the person table that are not 27 (Use not equals).
+SELECT * FROM person
+WHERE age != 27;
+
+--NUMBER 10 - List all the people in the person table where their favorite color is not red.
+SELECT * FROM person
+WHERE favorite_color != 'red';
+
+--NUMBER 11 - List all the people in the person table where their favorite color is not red and is not blue.
+SELECT * FROM person
+WHERE favorite_color != 'red' 
+AND favorite_color != 'blue';
+
+--NUMBER 12 - List all the people in the person table where their favorite color is orange or green.
+SELECT * FROM person
+WHERE favorite_color = 'orange'
+OR favorite_color = 'green';
+
+--NUMBER 13 - List all the people in the person table where their favorite color is orange, green or blue (use IN).
+SELECT * FROM person
+WHERE favorite_color IN ('orange', 'green', 'blue');
+
+--NUMBER 14 - List all the people in the person table where their favorite color is yellow or purple (use IN).
+SELECT * FROM person
+WHERE favorite_color IN ('yellow', 'purple');
